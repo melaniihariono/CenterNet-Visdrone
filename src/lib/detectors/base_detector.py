@@ -38,6 +38,7 @@ class BaseDetector(object):
     height, width = image.shape[0:2]
     new_height = int(height * scale)
     new_width  = int(width * scale)
+
     if self.opt.fix_res:
       inp_height, inp_width = self.opt.input_h, self.opt.input_w
       c = np.array([new_width / 2., new_height / 2.], dtype=np.float32)
@@ -48,6 +49,7 @@ class BaseDetector(object):
       c = np.array([new_width // 2, new_height // 2], dtype=np.float32)
       s = np.array([inp_width, inp_height], dtype=np.float32)
 
+    #Ground truth heatmap
     trans_input = get_affine_transform(c, s, 0, [inp_width, inp_height])
     resized_image = cv2.resize(image, (new_width, new_height))
     inp_image = cv2.warpAffine(

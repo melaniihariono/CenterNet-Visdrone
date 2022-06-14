@@ -98,8 +98,18 @@ class CTDetDataset(data.Dataset):
     gt_det = []
     for k in range(num_objs):
       ann = anns[k]
-      bbox = self._coco_box_to_bbox(ann['bbox'])
+      box = ann['bbox']
+
+      # hapus ignore dan other
+      if ann['category_id'] not in self.cat_ids.keys():
+          continue
+      bbox = np.array([box[0], box[1], box[0] + box[2], box[1] + box[3]],
+                            dtype=np.float32)  # xyxy
+
+      #bbox = self._coco_box_to_bbox(ann['bbox'])
       cls_id = int(self.cat_ids[ann['category_id']])
+
+
       if flipped:
         bbox[[0, 2]] = width - bbox[[2, 0]] - 1
       bbox[:2] = affine_transform(bbox[:2], trans_output)

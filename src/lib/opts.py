@@ -12,7 +12,7 @@ class opts(object):
     # basic experiment setting
     self.parser.add_argument('task', default='ctdet',
                              help='ctdet | ddd | multi_pose | exdet')
-    self.parser.add_argument('--dataset', default='coco',
+    self.parser.add_argument('--dataset', default='visdrone',
                              help='coco | kitti | coco_hp | pascal')
     self.parser.add_argument('--exp_id', default='default')
     self.parser.add_argument('--test', action='store_true')
@@ -74,9 +74,9 @@ class opts(object):
     self.parser.add_argument('--input_res', type=int, default=-1, 
                              help='input height and width. -1 for default from '
                              'dataset. Will be overriden by input_h | input_w')
-    self.parser.add_argument('--input_h', type=int, default=-1, 
+    self.parser.add_argument('--input_h', type=int, default=960, 
                              help='input height. -1 for default from dataset.')
-    self.parser.add_argument('--input_w', type=int, default=-1, 
+    self.parser.add_argument('--input_w', type=int, default=1280, 
                              help='input width. -1 for default from dataset.')
     
     # train
@@ -335,9 +335,9 @@ class opts(object):
 
   def init(self, args=''):
     default_dataset_info = {
-      'ctdet': {'default_resolution': [512, 512], 'num_classes': 80, 
-                'mean': [0.408, 0.447, 0.470], 'std': [0.289, 0.274, 0.278],
-                'dataset': 'coco'},
+      'ctdet': {'default_resolution': [960, 1280], 'num_classes': 10, 
+                'mean': [0.37294899, 0.37837514, 0.36463863], 'std': [0.19171683, 0.18299586, 0.19437608],
+                'dataset': 'visdrone'},
       'exdet': {'default_resolution': [512, 512], 'num_classes': 80, 
                 'mean': [0.408, 0.447, 0.470], 'std': [0.289, 0.274, 0.278],
                 'dataset': 'coco'},
