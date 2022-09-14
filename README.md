@@ -25,7 +25,7 @@ Detection identifies objects as axis-aligned boxes in an image. Most successful 
 
 ## A Method for Performance Improvement of Imbalance UAV Dataset-Based on Object Detection (proposed method)
 
-### Abstract
+### Introduction
 
 Object detection has become very popular in recent year, one of the popular implementation is detection on Unmanned Aerial Vehicle (UAV) or drone. Examples of implementing the detection object on drones are aerial mapping, and infrastructure inspection. However, the application of object detection on drones has several
 challenges, namely the presence of noise, blurring, low resolution, and the size of the detection target is quite small. Another thing that becomes an obstacle in object detection is the class imbalance. These problems will affect the results of the model’s performance if it is not handled properly.
