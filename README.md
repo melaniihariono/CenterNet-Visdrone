@@ -28,7 +28,7 @@ Detection identifies objects as axis-aligned boxes in an image. Most successful 
 
 - **Easy to use:** We provide user friendly testing API and webcam demos.
 
-# A METHOD FOR PERFORMANCE IMPROVEMENT OF IMBALANCE UAV DATASET-BASED ON OBJECT DETECTION (PROPOSE METHOD)
+# A Method for Performance Improvement of Imbalance UAV Dataset-Based on Object Detection (proposed method)
 
 ## Abstract
 
@@ -60,9 +60,9 @@ at 23.1% by using flip augmentation at the time of testing the data. If you do n
 All models and details are available in [Model zoo](readme/MODEL_ZOO.md).
 
 
-![](readme/image1.png)
-![](readme/image2.png)
-![](readme/image3.png)
+![](readme/image1.jpg)
+![](readme/image2.jpg)
+![](readme/image3.jpg)
 
 ## License
 
