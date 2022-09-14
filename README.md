@@ -25,7 +25,7 @@ Detection identifies objects as axis-aligned boxes in an image. Most successful 
 
 ## A Method for Performance Improvement of Imbalance UAV Dataset-Based on Object Detection (proposed method)
 
-## Abstract
+### Abstract
 
 Object detection has become very popular in recent year, one of the popular implementation is detection on Unmanned Aerial Vehicle (UAV) or drone. Examples of implementing the detection object on drones are aerial mapping, and infrastructure inspection. However, the application of object detection on drones has several
 challenges, namely the presence of noise, blurring, low resolution, and the size of the detection target is quite small. Another thing that becomes an obstacle in object detection is the class imbalance. These problems will affect the results of the model’s performance if it is not handled properly.
@@ -34,9 +34,9 @@ for object detection is CenterNet with Deep Aggregation layer as the backbone. T
 The results of the study show that modifying the hyperparameters on the focal loss can improve the performance of the model. The highest mAP value was obtained
 at 23.1% by using flip augmentation at the time of testing the data. If you do not use flip augmentation, the mAP value obtained is 22.4%. The modified CenterNet network architecture was also compared with several other architectures trained using the VisDrone-2019 dataset.
 
-## Main results
+### Main results
 
-### Object Detection on VisDrone dataset
+#### Object Detection on VisDrone dataset
 
 | a | b | AP / FPS| Flip AP / FPS | MultiScale AP / FPS |
 |---|---|---------|---------------|---------------------|
@@ -55,9 +55,9 @@ at 23.1% by using flip augmentation at the time of testing the data. If you do n
 All models and details are available in [Model zoo](readme/MODEL_ZOO.md).
 
 
-[](readme/image1.jpg)
-[](readme/image2.jpg)
-[](readme/image3.jpg)
+![](readme/image1.jpg)
+![](readme/image2.jpg)
+![](readme/image3.jpg)
 
 ## License
 
